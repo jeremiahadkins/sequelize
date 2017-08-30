@@ -1,5 +1,11 @@
 const models = require('./models');
 
+models.User.findAll().then((results) => {
+  results.forEach( function(result) {
+    result.bio = "";
+  });
+});
+
 /*
 models.User.create({
   name: "YoungThug",
